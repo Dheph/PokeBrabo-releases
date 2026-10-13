@@ -30,8 +30,15 @@ Sua próxima aventura começa aqui. Baixe o jogo: o launcher instala e mantém t
 
 1. Baixe e descompacte **PokeBrabo-macOS.zip**.
 2. Arraste **PokeBrabo.app** para **Aplicativos**.
-3. Na primeira vez, use **botão direito → Abrir** e confirme. O app ainda não tem assinatura da Apple.
+3. No **macOS 14**, use **botão direito no app → Abrir → Abrir**. No **macOS 15 ou posterior**, tente abrir e depois vá a **Ajustes do Sistema → Privacidade e Segurança → Abrir Mesmo Assim**.
 4. Abra o PokeBrabo em Aplicativos. O launcher instala e atualiza o jogo automaticamente.
+
+O app não tem certificado pago da Apple (Developer ID).
+
+Alternativa avançada no Terminal, para o app baixado do link oficial:
+```bash
+xattr -dr com.apple.quarantine /Applications/PokeBrabo.app
+```
 
 ## Antes de começar
 
