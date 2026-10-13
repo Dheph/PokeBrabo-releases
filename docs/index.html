@@ -1,3 +1,63 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PokeBrabo</title>
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0b1426;color:#e8eefc;font-family:system-ui,sans-serif}a{color:#f5b301}</style></head>
-<body><main><h1>PokeBrabo</h1><p>Site em construção. <a href="https://github.com/Dheph/PokeBrabo-releases/releases/latest">Downloads</a></p></main></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1426">
+  <meta name="description" content="Entre na aventura PokeBrabo. Baixe o jogo para Windows ou macOS Apple Silicon e acompanhe as novidades.">
+  <title>PokeBrabo — sua próxima aventura</title>
+  <link rel="icon" type="image/png" href="assets/clienticon.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/marked@18.1.1/lib/marked.umd.js" integrity="sha384-rATToyt6602Jnq8c7w8HZwmyOUgPL7mzxX01FBWoV48ns/EgkakGozpES+PnaYOI" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/dompurify@3.4.17/dist/purify.min.js" integrity="sha384-P0JNneQf81HOl9VwNXK76cQ9VMD6Nfsnepxb0cCOg8+UzEdzgPHAPV4wVQrvYQSx" crossorigin="anonymous"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="navigation">
+    <a class="wordmark" href="#inicio"><img src="assets/clienticon.png" width="32" height="32" alt="">PokeBrabo</a>
+    <nav aria-label="Navegação principal"><a href="#novidades">Novidades</a><a href="#instalar">Como instalar</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">Uma nova aventura começa aqui</p>
+        <img class="logo" src="assets/logo.png" alt="Logo PokeBrabo" width="480" fetchpriority="high">
+        <h1 id="hero-title">PokeBrabo</h1>
+        <p class="intro">Seu próximo desafio está à sua espera.<br>Entre no jogo e viva essa aventura.</p>
+        <div class="downloads" aria-label="Downloads do jogo">
+          <a class="download" id="download-windows" href="https://github.com/Dheph/PokeBrabo-releases/releases/latest/download/PokeBrabo-Launcher.exe">Baixar para Windows<span>Launcher · 64 bits</span></a>
+          <a class="download" id="download-macos" href="https://github.com/Dheph/PokeBrabo-releases/releases/latest/download/PokeBrabo-macOS.zip">Baixar para macOS (Apple Silicon)<span>Mac com chip Apple · arquivo ZIP</span></a>
+        </div>
+        <p class="download-hint">Instale uma vez. O launcher cuida das próximas atualizações.</p>
+        <p id="release-info" class="release-info" hidden></p>
+      </div>
+      <a class="explore" href="#novidades">Veja o que há de novo <span aria-hidden="true">↓</span></a>
+    </section>
+    <section class="section news" id="novidades" aria-labelledby="news-title">
+      <div class="section-heading"><div><p class="eyebrow">A aventura continua</p><h2 id="news-title">Novidades</h2></div><a href="https://github.com/Dheph/PokeBrabo-releases/releases">Todas as versões ↗</a></div>
+      <div id="release-notes" class="notes" aria-live="polite"></div>
+      <p id="notes-fallback"><a href="https://github.com/Dheph/PokeBrabo-releases/blob/main/docs/RELEASE_NOTES.md">Ler as notas de versão no GitHub ↗</a></p>
+    </section>
+    <section class="section" id="instalar" aria-labelledby="install-title">
+      <p class="eyebrow">Pronto para jogar?</p><h2 id="install-title">Como instalar</h2>
+      <div class="install-grid">
+        <article class="install-card"><p class="platform">01 / WINDOWS</p><h3>Baixe. Abra. Jogue.</h3><ol>
+          <li>Baixe e abra <strong>PokeBrabo-Launcher.exe</strong>.</li>
+          <li>Se aparecer o SmartScreen, clique em <strong>Mais informações → Executar assim mesmo</strong>. O launcher ainda não tem assinatura digital.</li>
+          <li>Aceite a instalação. O launcher baixa o jogo e cria o atalho <strong>PokeBrabo</strong> na Área de Trabalho.</li>
+          <li>Abra pelo atalho e clique em <strong>Jogar</strong>. As atualizações são automáticas.</li>
+        </ol></article>
+        <article class="install-card"><p class="platform">02 / MACOS · APPLE SILICON</p><h3>Sua aventura no Mac.</h3><ol>
+          <li>Baixe e descompacte <strong>PokeBrabo-macOS.zip</strong>.</li>
+          <li>Arraste <strong>PokeBrabo.app</strong> para <strong>Aplicativos</strong>.</li>
+          <li>Na primeira vez, use <strong>botão direito → Abrir</strong> e confirme a abertura. O app ainda não tem assinatura da Apple.</li>
+          <li>Abra o PokeBrabo em Aplicativos. O launcher instala o jogo e cuida das atualizações.</li>
+        </ol></article>
+      </div>
+      <aside class="requirements" aria-labelledby="requirements-title"><h3 id="requirements-title">Requisitos</h3><ul><li>Windows de 64 bits ou Mac com chip Apple Silicon (M1 ou posterior).</li><li>Conexão com a internet para baixar, atualizar e jogar online.</li><li>Pelo menos 1,5 GB de espaço livre. O primeiro download tem cerca de 700 MB.</li></ul><p>Feche o jogo antes de atualizar. Suas teclas e opções são preservadas.</p></aside>
+    </section>
+  </main>
+  <footer><a class="wordmark" href="#inicio">PokeBrabo</a><p>Até a próxima aventura.</p><a href="https://github.com/Dheph/PokeBrabo-releases">Downloads e versões ↗</a></footer>
+</body>
+</html>
